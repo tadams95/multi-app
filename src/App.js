@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import { Route } from "react-router-dom";
+import Layout from "./layout/Layout";
+import AllNotes from "./pages/AllNotes";
+import Counter from "./pages/Counter";
+import NewNote from "./pages/NewNote";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <p>
+        This will be a React Multi App with a Note Taking Function, Counter, and
+        backend functionality
+      </p>
+
+      
+        <div>
+          <AllNotes />
+        </div>
+
+        <div>
+          <Counter />
+        </div>
+
+        <div>
+          <NewNote />
+        </div>
+
+        <div>
+          <NotFound />
+        </div>
+
+    </Layout>
   );
 }
 
